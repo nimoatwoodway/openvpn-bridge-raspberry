@@ -5,11 +5,11 @@ Download Light Version of Raspain from here: https://www.raspberrypi.org/downloa
 
 Follow installation guide here: https://www.raspberrypi.org/documentation/installation/installing-images/README.md
 
-To access the PI without monitor create ssh file on boot partition described here: https://hackernoon.com/raspberry-pi-headless-install-462ccabd75d0
-
 **ATTENTION**
 When writing this tutorial I could not get work PiVPN with Raspian **Stretch** since installation failed without warning. Files where missing e.g. etc/openvpn/server.conf
 Here is a fix for this: https://github.com/pivpn/pivpn/issues/713#issuecomment-481744434
+
+To access the PI without monitor create ssh file on boot partition described here: https://hackernoon.com/raspberry-pi-headless-install-462ccabd75d0
 
 On macOS remount the sd card and
 
