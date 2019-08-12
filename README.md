@@ -3,7 +3,7 @@
 ## Install Raspberry
 Download Light Version of Raspain from here: https://www.raspberrypi.org/downloads/raspbian/
 
-Follow installation guide here: https://www.raspberrypi.org/downloads/raspbian/
+Follow installation guide here: https://www.raspberrypi.org/documentation/installation/installing-images/README.md
 
 To access the PI without monitor create ssh file on boot partition described here: https://hackernoon.com/raspberry-pi-headless-install-462ccabd75d0
 
