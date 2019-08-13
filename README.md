@@ -146,13 +146,32 @@ sudo vim /etc/openvpn/server.conf
 ```
 
 ```
-...
-port 1194
-proto udp
 dev tap0
+proto udp
+port 1194
 ca /etc/openvpn/easy-rsa/pki/ca.crt
-...
+cert /etc/openvpn/easy-rsa/pki/issued/server_Bv8oqBI5euapRsuJ.crt
+key /etc/openvpn/easy-rsa/pki/private/server_Bv8oqBI5euapRsuJ.key
+dh none
+client-to-client
+keepalive 1800 3600
+remote-cert-tls client
+tls-version-min 1.2
+tls-crypt /etc/openvpn/easy-rsa/pki/ta.key
+cipher AES-256-CBC
+auth SHA256
+user nobody
+group nogroup
+persist-key
+#persist-tun
+crl-verify /etc/openvpn/crl.pem
+status /var/log/openvpn-status.log 20
+status-version 3
+syslog
+verb 3
+server-bridge 192.168.1.91 255.255.255.0 192.168.1.95 192.168.1.200
 ```
+Adjust last line with your settings. First IP is the raspi and the last to the range of ips for the openvpn clients. 
 
 ## Create OpenVPN config file for client
 
