@@ -32,7 +32,7 @@ passwd
 Standard stuff I install on every new Installation + bridge-utils (needed later)
 
 ```
-sudo apt-get install vim git screen bridge-utils
+sudo apt update && sudo apt install vim git screen bridge-utils
 ```
 
 ## Install PiVPN (OpenVPN)
