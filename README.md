@@ -150,8 +150,8 @@ dev tap0
 proto udp
 port 1194
 ca /etc/openvpn/easy-rsa/pki/ca.crt
-cert /etc/openvpn/easy-rsa/pki/issued/server_Bv8oqBI5euapRsuJ.crt
-key /etc/openvpn/easy-rsa/pki/private/server_Bv8oqBI5euapRsuJ.key
+cert /etc/openvpn/easy-rsa/pki/issued/server_*********.crt
+key /etc/openvpn/easy-rsa/pki/private/server_*********.key
 dh none
 client-to-client
 keepalive 1800 3600
@@ -171,7 +171,7 @@ syslog
 verb 3
 server-bridge 192.168.1.91 255.255.255.0 192.168.1.95 192.168.1.200
 ```
-Adjust last line with your settings. First IP is the raspi and the last to the range of ips for the openvpn clients. 
+Adjust last line with your settings but leaf the cert and key param as is. First IP is the raspi and the last to the range of ips for the openvpn clients.
 
 ## Create OpenVPN config file for client
 
